@@ -18,6 +18,7 @@ namespace AppHomeWeb.Business
         }
         public int ActualizarClave(Usuario_BE Ent)
         {
+            
             Usuario_DL objUsuario_DL = new Usuario_DL();
             return objUsuario_DL.ActualizarClave(Ent);
         }
