@@ -1,0 +1,5 @@
+D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\bin\Debug\AppHomeWeb.Entity.dll
+D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\bin\Debug\AppHomeWeb.Entity.pdb
+D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\obj\Debug\AppHomeWeb.Entity.csprojResolveAssemblyReference.cache
+D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\obj\Debug\AppHomeWeb.Entity.dll
+D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\obj\Debug\AppHomeWeb.Entity.pdb
