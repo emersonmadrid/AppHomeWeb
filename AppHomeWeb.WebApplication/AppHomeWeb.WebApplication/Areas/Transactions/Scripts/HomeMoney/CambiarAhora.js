@@ -4,21 +4,199 @@
         $.extend(this, $.fn.ContenedorCambiarAhora.defaults, $element.data(), typeof options == 'object' && options);
         this.setControls({
             form: $element,
-            hdidPerfilUsuario: $('#hdidPerfilUsuario', $element)
+            hdidPerfilUsuario: $('#hdidPerfilUsuario', $element),
+            idprecioVenta: $('#idprecioVenta', $element),
+            idprecioCompra: $('#idprecioCompra', $element),
+
+            idcambiar: $('#idcambiar', $element),
+            idresultado: $('#idresultado', $element),
+            btncambiarAhora: $('#btncambiarAhora', $element),
         });
     };
     Form.prototype = {
         constructor: Form,
         init: function () {
             var that = this,
-            controls = that.getControls();
-            console.log('CambiarAhora');
+                controls = that.getControls();
+            controls.idcambiar.addEvent(this, 'keyup', that.keyupCambiar);
+            controls.btncambiarAhora.addEvent(this, 'clic', that.btncambiarAhora_click);
+
             that.render();
         },
         render: function () {
             var that = this,
-                controls = that.getControls();            
-        },      
+                controls = that.getControls();
+            that.GetTipo_Cambio();
+
+        },
+
+        setCambiarAhora: function () {
+            var obj = {
+                monto: montoEntrada,
+                tipo: tipoCambioMoneda
+            };
+            $.ajax({
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                //data: JSON.stringify(parameters),
+                async: false,
+                url: '/Transactions/HomeMoney/registrarMonto',
+                success: function (response) {
+
+                    if (response.data.ListTipo_Cambio.length != null) {
+                        if (response.data.ListTipo_Cambio.length > 0) {
+                            var montoVenta = response.data.ListTipo_Cambio[0].monto_venta;
+                            var montoCompra = response.data.ListTipo_Cambio[0].monto_compra
+                            montoVenta = montoVenta.replace(/,/g, '.');
+                            montoCompra = montoCompra.replace(/,/g, '.');
+                            response.data.ListTipo_Cambio[0].monto_compra;
+                            controls.idprecioVenta.text(montoVenta);
+                            controls.idprecioCompra.text(montoCompra);
+                        }
+                    }
+                },
+                error: function (msger) {
+                    console.log('Error GetTipo_Cambio ' + msger);
+                }
+
+            });
+        },
+
+        btncambiarAhora_click: function () {
+            var that = this,
+                controls = that.getControls();
+
+            var montoEntrada = controls.idcambiar.val();
+            if (montoEntrada > 0 && tipoCambioMoneda != null) {
+                that.setCambiarAhora(montoEntrada);
+            } else {
+                //$('#mensaje-error').text("Ingrese monto para continuar");
+                alert("Ingrese monto para continuar");
+            }
+
+
+            var tempValue = controls.idcambiar.val();
+            if (tempValue == "") {
+                controls.idcambiar.val("");
+                controls.idresultado.val("");
+            } else {
+                if (that.filter(tempValue) === false) {
+                    return false;
+                } else {
+                    that.calcularMonto(tempValue, 0);
+                    return true;
+                }
+
+            }
+
+        },
+
+
+        keyupCambiar: function () {
+            var that = this,
+                controls = that.getControls();
+            var tempValue = controls.idcambiar.val();
+            if (tempValue == "") {
+                controls.idcambiar.val("");
+                controls.idresultado.val("");
+            } else {
+                if (that.filter(tempValue) === false) {
+                    return false;
+                } else {
+                    that.calcularMonto(tempValue, 0);
+                    return true;
+                }
+
+            }
+
+        },
+        filter: function (__val__) {
+            var preg = /^([0-9]+\.?[0-9]{0,2})$/;
+            if (preg.test(__val__) === true) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+
+        calcularMonto: function (val, direccion) {
+            var that = this,
+                controls = that.getControls();
+            var tipoCambioMoneda = 0;
+            var resultado = 0.00;
+            var venta = controls.idprecioVenta.text();
+            var compra = controls.idprecioCompra.text();
+            if (direccion === 0) {
+                if (tipoCambioMoneda < 1) {
+                    // DOLARES A SOLES
+                    console.log(parseFloat(val));
+                    console.log(parseFloat(venta));
+                    resultado = that.roundToX(parseFloat(val) / parseFloat(venta), 2);
+                    console.log(resultado);
+                } else {
+                    // DOLARES A SOLES
+                    resultado = that.roundToX(parseFloat(val) * parseFloat(compra), 2);
+                }
+                if (isNaN(resultado)) {
+                    resultado = "";
+                }
+                controls.idresultado.val(resultado);
+            } else {
+                if (tipoCambioMoneda < 1) {
+                    // SOLES A DOLARES
+                    resultado = that.roundToX(parseFloat(val) * parseFloat(venta), 2);
+                } else {
+                    // DOLARES A SOLES
+                    resultado = that.roundToX(parseFloat(val) / parseFloat(compra), 2);
+                }
+                if (isNaN(resultado)) {
+                    resultado = "";
+                }
+                controls.idcambiar.val(resultado);
+            }
+
+        },
+        roundToX: function(num, X) {
+            return +(Math.round(num + "e+" + X) + "e-" + X);
+        },
+
+        GetTipo_Cambio: function () {
+            var that = this,
+                controls = that.getControls();
+            controls.idprecioVenta.text('');
+            controls.idprecioCompra.text('');
+            $.ajax({
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                //data: JSON.stringify(parameters),
+                async: false,
+                url: '/Transactions/HomeMoney/GetTipo_Cambio',
+                success: function (response) {
+                    console.log('Response GetTipo_Cambio');
+                    console.log(response);
+
+                    if (response.data.ListTipo_Cambio.length != null) {
+                        if (response.data.ListTipo_Cambio.length > 0) {
+                            var montoVenta = response.data.ListTipo_Cambio[0].monto_venta;
+                            var montoCompra = response.data.ListTipo_Cambio[0].monto_compra
+                            montoVenta = montoVenta.replace(/,/g, '.');
+                            montoCompra = montoCompra.replace(/,/g, '.');
+                            response.data.ListTipo_Cambio[0].monto_compra;
+                            controls.idprecioVenta.text(montoVenta);
+                            controls.idprecioCompra.text(montoCompra);
+                        }
+                    }
+                },
+                error: function (msger) {
+                    console.log('Error GetTipo_Cambio ' + msger);
+                }
+
+            });
+
+        },
+
         getControls: function () {
             return this.m_controls || {};
         },

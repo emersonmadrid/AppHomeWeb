@@ -6,3 +6,13 @@ D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\obj\Debug\AppHomeWeb.Dat
 D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\obj\Debug\AppHomeWeb.Data.dll
 D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\obj\Debug\AppHomeWeb.Data.pdb
 D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\bin\Debug\AppHomeWeb.Data.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\bin\Debug\AppHomeWeb.Data.pdb
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\bin\Debug\AppHomeWeb.Entity.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\bin\Debug\AppHomeWeb.Entity.pdb
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\obj\Debug\AppHomeWeb.Data.csprojAssemblyReference.cache
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\obj\Debug\AppHomeWeb.Data.csproj.CoreCompileInputs.cache
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\obj\Debug\AppHomeWeb.Data.csproj.CopyComplete
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\obj\Debug\AppHomeWeb.Data.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Data\obj\Debug\AppHomeWeb.Data.pdb

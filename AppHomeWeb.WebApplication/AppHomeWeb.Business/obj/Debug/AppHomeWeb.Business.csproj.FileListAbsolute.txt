@@ -8,3 +8,15 @@ D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\obj\Debug\AppHomeWeb
 D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\obj\Debug\AppHomeWeb.Business.dll
 D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\obj\Debug\AppHomeWeb.Business.pdb
 D:\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\bin\Debug\AppHomeWeb.Business.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\bin\Debug\AppHomeWeb.Business.pdb
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\bin\Debug\AppHomeWeb.Data.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\bin\Debug\AppHomeWeb.Entity.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\bin\Debug\AppHomeWeb.Data.pdb
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\bin\Debug\AppHomeWeb.Entity.pdb
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\obj\Debug\AppHomeWeb.Business.csprojAssemblyReference.cache
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\obj\Debug\AppHomeWeb.Business.csproj.CoreCompileInputs.cache
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\obj\Debug\AppHomeWeb.Business.csproj.CopyComplete
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\obj\Debug\AppHomeWeb.Business.dll
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Business\obj\Debug\AppHomeWeb.Business.pdb
