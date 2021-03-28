@@ -7,7 +7,6 @@
             hdidPerfilUsuario: $('#hdidPerfilUsuario', $element),
             idprecioVenta: $('#idprecioVenta', $element),
             idprecioCompra: $('#idprecioCompra', $element),
-
             idcambiar: $('#idcambiar', $element),
             idresultado: $('#idresultado', $element),
             btncambiarAhora: $('#btncambiarAhora', $element),
@@ -43,17 +42,11 @@
                 async: false,
                 url: '/Transactions/HomeMoney/registrarMonto',
                 success: function (response) {
-
-                    if (response.data.ListTipo_Cambio.length != null) {
-                        if (response.data.ListTipo_Cambio.length > 0) {
-                            var montoVenta = response.data.ListTipo_Cambio[0].monto_venta;
-                            var montoCompra = response.data.ListTipo_Cambio[0].monto_compra
-                            montoVenta = montoVenta.replace(/,/g, '.');
-                            montoCompra = montoCompra.replace(/,/g, '.');
-                            response.data.ListTipo_Cambio[0].monto_compra;
-                            controls.idprecioVenta.text(montoVenta);
-                            controls.idprecioCompra.text(montoCompra);
-                        }
+                    if (response.data.ListTipo_Cambio.length > 0) {
+                        let montoVenta = response.data.ListTipo_Cambio[0].monto_venta.replace(/,/g, '.');
+                        let montoCompra = response.data.ListTipo_Cambio[0].monto_compra.replace(/,/g, '.');
+                        controls.idprecioVenta.text(montoVenta);
+                        controls.idprecioCompra.text(montoCompra);
                     }
                 },
                 error: function (msger) {
@@ -74,7 +67,6 @@
                 //$('#mensaje-error').text("Ingrese monto para continuar");
                 alert("Ingrese monto para continuar");
             }
-
 
             var tempValue = controls.idcambiar.val();
             if (tempValue == "") {
@@ -129,7 +121,7 @@
             var compra = controls.idprecioCompra.text();
             if (direccion === 0) {
                 if (tipoCambioMoneda < 1) {
-                    // DOLARES A SOLES
+                    // SOLES A DOLARES
                     resultado = that.roundToX(parseFloat(val) / parseFloat(venta), 2);
                 } else {
                     // DOLARES A SOLES
@@ -154,7 +146,7 @@
             }
 
         },
-        roundToX: function(num, X) {
+        roundToX: function (num, X) {
             return +(Math.round(num + "e+" + X) + "e-" + X);
         },
 
@@ -171,16 +163,11 @@
                 async: false,
                 url: '/Transactions/HomeMoney/GetTipo_Cambio',
                 success: function (response) {
-                    if (response.data.ListTipo_Cambio.length != null) {
-                        if (response.data.ListTipo_Cambio.length > 0) {
-                            var montoVenta = response.data.ListTipo_Cambio[0].monto_venta;
-                            var montoCompra = response.data.ListTipo_Cambio[0].monto_compra
-                            montoVenta = montoVenta.replace(/,/g, '.');
-                            montoCompra = montoCompra.replace(/,/g, '.');
-                            response.data.ListTipo_Cambio[0].monto_compra;
-                            controls.idprecioVenta.text(montoVenta);
-                            controls.idprecioCompra.text(montoCompra);
-                        }
+                    if (response.data.ListTipo_Cambio.length > 0) {
+                        var montoVenta = response.data.ListTipo_Cambio[0].monto_venta.replace(/,/g, '.');
+                        var montoCompra = response.data.ListTipo_Cambio[0].monto_compra.replace(/,/g, '.');
+                        controls.idprecioVenta.text(montoVenta);
+                        controls.idprecioCompra.text(montoCompra);
                     }
                 },
                 error: function (msger) {
