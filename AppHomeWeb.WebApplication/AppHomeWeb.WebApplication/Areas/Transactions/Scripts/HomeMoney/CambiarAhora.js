@@ -130,10 +130,7 @@
             if (direccion === 0) {
                 if (tipoCambioMoneda < 1) {
                     // DOLARES A SOLES
-                    console.log(parseFloat(val));
-                    console.log(parseFloat(venta));
                     resultado = that.roundToX(parseFloat(val) / parseFloat(venta), 2);
-                    console.log(resultado);
                 } else {
                     // DOLARES A SOLES
                     resultado = that.roundToX(parseFloat(val) * parseFloat(compra), 2);
@@ -174,9 +171,6 @@
                 async: false,
                 url: '/Transactions/HomeMoney/GetTipo_Cambio',
                 success: function (response) {
-                    console.log('Response GetTipo_Cambio');
-                    console.log(response);
-
                     if (response.data.ListTipo_Cambio.length != null) {
                         if (response.data.ListTipo_Cambio.length > 0) {
                             var montoVenta = response.data.ListTipo_Cambio[0].monto_venta;
