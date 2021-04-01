@@ -74,7 +74,6 @@
 
                     console.log('Response GetDatoCliente');
                     console.log(response);
-                    debugger;
                     if (response.data.ListDatoCliente.length != null) {
                         if (response.data.ListDatoCliente.length > 0) {
 

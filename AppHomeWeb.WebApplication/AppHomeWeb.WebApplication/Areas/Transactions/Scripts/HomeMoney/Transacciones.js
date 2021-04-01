@@ -53,7 +53,6 @@ console.log(Sessionidusuario);
         btnMisDatos_click: function (sender, args) {
             var that = this,
              controls = that.getControls();
-            debugger;
             that.LoadIframe('EditarCliente', Sessionidusuario);
         },
         LoadIframe: function (pagina,id) {

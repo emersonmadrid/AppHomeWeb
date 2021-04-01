@@ -41,16 +41,16 @@
                 //data: JSON.stringify(parameters),
                 async: false,
                 url: '/Transactions/HomeMoney/registrarMonto',
-                success: function (response) {
-                    if (response.data.ListTipo_Cambio.length > 0) {
-                        let montoVenta = response.data.ListTipo_Cambio[0].monto_venta.replace(/,/g, '.');
-                        let montoCompra = response.data.ListTipo_Cambio[0].monto_compra.replace(/,/g, '.');
-                        controls.idprecioVenta.text(montoVenta);
-                        controls.idprecioCompra.text(montoCompra);
+                success: function (data) {
+                    if (data.estado) {
+                        console.log("acabo bien");
+                        window.location.href = '/Transactions/HomeMoney/cuentas';
+                    } else {
+                        window.location.href = uri + 'inicioRegistro';
                     }
                 },
                 error: function (msger) {
-                    console.log('Error GetTipo_Cambio ' + msger);
+                    console.log('Error cuentas ' + msger);
                 }
 
             });
@@ -68,23 +68,7 @@
                 alert("Ingrese monto para continuar");
             }
 
-            var tempValue = controls.idcambiar.val();
-            if (tempValue == "") {
-                controls.idcambiar.val("");
-                controls.idresultado.val("");
-            } else {
-                if (that.filter(tempValue) === false) {
-                    return false;
-                } else {
-                    that.calcularMonto(tempValue, 0);
-                    return true;
-                }
-
-            }
-
         },
-
-
         keyupCambiar: function () {
             var that = this,
                 controls = that.getControls();

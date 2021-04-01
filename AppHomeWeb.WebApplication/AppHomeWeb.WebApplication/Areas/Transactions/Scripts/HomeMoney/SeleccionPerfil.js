@@ -237,14 +237,8 @@ console.log(Sessionidusuario);
         },
         OpenTransacciones_click: function (sender, args) {
             var that = this,
-             controls = that.getControls();
-
-            debugger;
-         
+             controls = that.getControls();      
             var UsuarioPerfil = $(sender).attr("section");
-           
-            
-
             //var session = {
             //    UsuarioPerfil: UsuarioPerfil,
             //    Usuario: Sessionidusuario

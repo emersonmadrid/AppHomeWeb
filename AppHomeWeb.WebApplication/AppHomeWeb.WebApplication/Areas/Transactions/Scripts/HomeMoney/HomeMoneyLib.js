@@ -33,7 +33,6 @@ function iframeLoaded() {
 
 // runs a function after an iframe node's content has loaded // note, this almost certainly won't work for frames loaded from a different domain onReady: 
 function LoadIframe(iframeNode) {
-    debugger;
     var windowDocument = iframeNode[0].contentWindow.document;
     var iframeDocument = windowDocument ? windowDocument : iframeNode[0].contentWindow.document
     if (iframeDocument.readyState === 'complete') {

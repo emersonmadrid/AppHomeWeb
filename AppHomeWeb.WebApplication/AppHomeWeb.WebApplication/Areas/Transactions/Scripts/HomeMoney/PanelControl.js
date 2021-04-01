@@ -45,13 +45,11 @@ console.log(Sessionidusuario);
         btnMiCuentaControl_click: function (sender, args) {
             var that = this,
              controls = that.getControls();
-            debugger;
             that.LoadIframe('MisCuentasBancarias', SessionidusuarioPerfil);
         },
         btnMisDatosControl_click: function (sender, args) {
             var that = this,
              controls = that.getControls();
-            debugger;
             that.LoadIframe('EditarCliente', Sessionidusuario);
         },
         LoadIframe: function (pagina, id) {
