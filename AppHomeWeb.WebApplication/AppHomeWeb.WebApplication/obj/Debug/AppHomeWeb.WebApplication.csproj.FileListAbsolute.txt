@@ -143,8 +143,6 @@ C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplicatio
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\es\System.Web.WebPages.resources.dll
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\es\EntityFramework.resources.dll
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\es\EntityFramework.SqlServer.resources.dll
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
