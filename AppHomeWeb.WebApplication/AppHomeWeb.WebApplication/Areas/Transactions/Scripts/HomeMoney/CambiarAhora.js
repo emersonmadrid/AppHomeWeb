@@ -24,8 +24,6 @@
             controls.btncambiarMoneda.addEvent(this, 'clic', that.btncambiarMoneda_click);
 
             var tipoCambioMoneda = 0;
-
-            console.log(tipoCambioMoneda);
             that.render();
         },
         render: function () {
@@ -163,12 +161,8 @@
             if (direccion === 0) {
                 if (tipoCambioMoneda < 1) {
                     // SOLES A DOLARES
-                    console.log(parseFloat(val) / parseFloat(venta));
                     resultado = that.roundToX(parseFloat(val) / parseFloat(venta), 2);
-                    console.log(resultado);
-                    console.log(parseFloat(val));
-                    console.log(parseFloat(venta));
-                    
+                 
 
                 } else {
                     // DOLARES A SOLES
