@@ -49,7 +49,6 @@
                 url: '/Transactions/HomeMoney/registrarMonto',
                 success: function (data) {
                     if (data.estado) {
-                        console.log("acabo bien");
                         window.location.href = '/Transactions/HomeMoney/cuentas';
                     } else {
                         window.location.href = uri + 'inicioRegistro';
@@ -66,7 +65,6 @@
         btncambiarMoneda_click: function () {
             var that = this,
                 controls = that.getControls();
-            console.log('cambiarmoneda');
             tipoCambioMoneda = (tipoCambioMoneda == 0 ? 1 : 0);
             that.calcularMonto(controls.idcambiar.val(),0);
             that.actualizarValoresMoneda();
@@ -196,9 +194,6 @@
 
         },
         roundToX: function (num, X) {
-            console.log(num);
-            console.log(X);
-
             return +(Math.round(num + "e+" + X) + "e-" + X);
         },
 
