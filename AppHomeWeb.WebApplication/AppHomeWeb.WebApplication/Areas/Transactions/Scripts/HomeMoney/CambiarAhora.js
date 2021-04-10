@@ -32,10 +32,11 @@
         render: function () {
             var that = this,
                 controls = that.getControls();
+
             //that.GetTipo_Cambio();
 
         },
-
+//solo agregue comentario
         setCambiarAhora: function () {
             var obj = {
                 monto: montoEntrada,
