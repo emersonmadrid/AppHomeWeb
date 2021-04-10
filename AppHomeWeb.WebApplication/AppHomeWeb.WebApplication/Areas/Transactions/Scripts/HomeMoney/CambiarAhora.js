@@ -10,9 +10,13 @@
             idcambiar: $('#idcambiar', $element),
             idresultado: $('#idresultado', $element),
             btncambiarAhora: $('#btncambiarAhora', $element),
-            btncambiarMoneda: $('.cambiarMoneda', $element),
+            textoPen: $('#textoPen', $element),
+            textoUss: $('#textoUss', $element),
+            btncambiarMoneda: $('#btncambiarMoneda', $element),
+
         });
     };
+    var tipoCambioMoneda = 0;
     Form.prototype = {
         constructor: Form,
         init: function () {
@@ -20,16 +24,15 @@
                 controls = that.getControls();
             controls.idcambiar.addEvent(this, 'keyup', that.keyupCambiar);
             controls.idresultado.addEvent(this, 'keyup', that.keyupResultado);
-            controls.btncambiarAhora.addEvent(this, 'clic', that.btncambiarAhora_click);
-            controls.btncambiarMoneda.addEvent(this, 'clic', that.btncambiarMoneda_click);
-
-            var tipoCambioMoneda = 0;
+            controls.btncambiarAhora.addEvent(this, 'click', that.btncambiarAhora_click);
+            controls.btncambiarMoneda.addEvent(this, 'click', that.btncambiarMoneda_click);
+            console.log('cambiarmuuuu');
             that.render();
         },
         render: function () {
             var that = this,
                 controls = that.getControls();
-            that.GetTipo_Cambio();
+            //that.GetTipo_Cambio();
 
         },
 
@@ -63,15 +66,16 @@
         btncambiarMoneda_click: function () {
             var that = this,
                 controls = that.getControls();
+            console.log('entro');
             tipoCambioMoneda = (tipoCambioMoneda == 0 ? 1 : 0);
-            that.calcularMonto(controls.idcambiar.val(),0);
+            //that.calcularMonto(controls.idcambiar.val(), 0);
+            console.log(tipoCambioMoneda);
             that.actualizarValoresMoneda();
         },
 
         btncambiarAhora_click: function () {
             var that = this,
                 controls = that.getControls();
-
             var montoEntrada = controls.idcambiar.val();
             if (montoEntrada > 0 && tipoCambioMoneda != null) {
                 that.setCambiarAhora(montoEntrada);
@@ -119,10 +123,6 @@
 
         },
 
-
-
-
-
         filter: function (__val__) {
             var preg = /^([0-9]+\.?[0-9]{0,2})$/;
             if (preg.test(__val__) === true) {
@@ -132,24 +132,27 @@
             }
         },
 
-
-    actualizarValoresMoneda: function () {
-        var that = this,
-            controls = that.getControls();
-        if (tipoCambioMoneda == 0) {
-            htmlIn = "PEN";
-            htmlOut = "USD";
-            //  $('#inpt-imagen-entrada').attr('src', imagenPeru);
-            //  $('#inpt-imagen-salida').attr('src', imagenUsa);
-        } else {
-            htmlIn = "USD";
-            htmlOut = "PEN";
-            //  $('#inpt-imagen-entrada').attr('src', imagenUsa);
-            //  $('#inpt-imagen-salida').attr('src', imagenPeru);
-        }
-        //$('#inpt-text-entrada').text(htmlIn);
-        //$('#inpt-salida-entrada').text(htmlOut)
-    },
+        actualizarValoresMoneda: function () {
+            var that = this,
+                controls = that.getControls();
+            var htmlIn = "";
+            var htmlOut = "";
+            if (tipoCambioMoneda == 0) {
+                htmlIn = "PEN";
+                htmlOut = "USD";
+                //  $('#inpt-imagen-entrada').attr('src', imagenPeru);
+                //  $('#inpt-imagen-salida').attr('src', imagenUsa);
+            } else {
+                htmlIn = "USD";
+                htmlOut = "PEN";
+                //  $('#inpt-imagen-entrada').attr('src', imagenUsa);
+                //  $('#inpt-imagen-salida').attr('src', imagenPeru);
+            }
+            controls.textoPen.text(htmlIn);
+            controls.textoUss.text(htmlOut);
+            //$('#textoSol').text(htmlIn);
+            //$('#textoUss').text(htmlOut);
+        },
 
         calcularMonto: function (val, direccion) {
             var that = this,
@@ -162,7 +165,7 @@
                 if (tipoCambioMoneda < 1) {
                     // SOLES A DOLARES
                     resultado = that.roundToX(parseFloat(val) / parseFloat(venta), 2);
-                 
+
 
                 } else {
                     // DOLARES A SOLES

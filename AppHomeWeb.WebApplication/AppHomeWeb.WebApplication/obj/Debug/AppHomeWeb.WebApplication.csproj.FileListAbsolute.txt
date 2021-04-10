@@ -112,6 +112,8 @@ C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplicatio
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\AppHomeWeb.Data.dll
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\AppHomeWeb.Business.pdb
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\AppHomeWeb.Entity.pdb
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\EntityFramework.xml
+C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\EntityFramework.SqlServer.xml
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\System.Web.Helpers.xml
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\System.Web.Mvc.xml
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\System.Web.Optimization.xml
@@ -121,8 +123,6 @@ C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplicatio
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\System.Web.WebPages.Razor.xml
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\Newtonsoft.Json.xml
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\Antlr3.Runtime.pdb
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\EntityFramework.xml
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\EntityFramework.SqlServer.xml
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml

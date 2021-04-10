@@ -189,43 +189,30 @@
         .table-filter .media .summary {
             font-size: 14px;
         }
+
         img {
             max-width: 100%
         }
-        /*        .b1Intercambio {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            right: 0;
-            margin: auto;
-            display: flex;
-            -webkit-box-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            justify-content: center;
-            pointer-events: none;
-            z-index: 20;
-        }*/
+
+        .glyphicon.glyphicon-transfer {
+            font-size: 25px;
+            line-height: 45px;
+            border-radius: 50%;
+            border: none;
+            border-color: #398439;
+            height: 50px;
+            width: 50px;
+            background-color: #5cb85c;
+            outline: none;
+            color: #fff;
+            transition: color .3s, background .3s;
+            /*box-shadow helps soften the choppy circle*/
+            box-shadow: 0 0 1px #fff, inset 0 0 2px #fff;
+        }
+
         .b1CajaWrap {
             position: relative;
         }
-
-        /*        div {
-            display: block;
-        }*/
-
-        /*        a:any-link {
-            cursor: pointer;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        a {
-            text-decoration: none;
-        }*/
     </style>
 </head>
 <!------ Include the above in your HEAD tag ---------->
@@ -287,9 +274,7 @@
                                             <span id="idprecioCompra" style="font-size: 17px;"> </span>
                                         </div>
                                         <div class="col-xs-2 col-md-2">
-                                            <a href="#" class="alert-primary">
-                                                <img src="~/Areas/Transactions/Images/CambiarAhora.png" width="60" />
-                                            </a>
+                                            <button id="btncambiarMoneda" type="button" class="glyphicon glyphicon-transfer"></button>
                                         </div>
 
                                         <div id="sale-span-item" class="col-xs-3 col-md-3" style="opacity: 1;">
@@ -304,17 +289,35 @@
                                 </div>
                                 <div class="row form-inline">
                                     <div class="col-md-12">
-                                        <div class="col-xs-6 col-md-6">
+                                        <div class="col-xs-3 col-md-3">
+                                        </div>
+                                        <div class="col-xs-3 col-md-3">
                                             <p class="text-primary">ENVÍAS</p>
                                             <input id="idcambiar" type="text" class="form-control" placeholder="S./" />
                                         </div>
-
-                                        <div class="col-xs-6 col-md-6">
+                                        <div class="col-xs-3 col-md-3">
                                             <p class="text-primary">RECIBES</p>
                                             <input id="idresultado" type="text" class="form-control" placeholder="$" />
                                         </div>
+                                        <div class="col-xs-3 col-md-3">
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="row form-inline">
+                                    <div class="col-md-12">
+                                        <div class="col-xs-3 col-md-3">
+                                        </div>
+                                        <div class="col-xs-3 col-md-3">
+                                            <h6 id="textoPen">PEN</h6>
+                                        </div>
+                                        <div class="col-xs-3 col-md-3">
+                                            <h6 id="textoUss">USD</h6>
+                                        </div>
+                                        <div class="col-xs-3 col-md-3">
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <br>
                                 <div>
                                     <div class="col-md-12">
