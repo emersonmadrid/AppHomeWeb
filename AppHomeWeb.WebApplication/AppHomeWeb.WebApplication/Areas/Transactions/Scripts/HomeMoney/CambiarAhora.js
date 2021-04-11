@@ -26,7 +26,6 @@
             controls.idresultado.addEvent(this, 'keyup', that.keyupResultado);
             controls.btncambiarAhora.addEvent(this, 'click', that.btncambiarAhora_click);
             controls.btncambiarMoneda.addEvent(this, 'click', that.btncambiarMoneda_click);
-            console.log('cambiarmuuuu');
             that.render();
         },
         render: function () {
@@ -36,7 +35,7 @@
             that.GetTipo_Cambio();
 
         },
-//nuevo comentario con ignore
+
         setCambiarAhora: function () {
             var obj = {
                 monto: montoEntrada,
@@ -137,19 +136,28 @@
                 controls = that.getControls();
             var htmlIn = "";
             var htmlOut = "";
+            var resultadoplaceholder= "";
+            var cambiarplaceholder = "";
+
             if (that.tipoCambioMoneda == 0) {
                 htmlIn = "ENVÍAS SOLES";
                 htmlOut = "RECIBES DOLARES";
+                resultadoplaceholder = "$";
+                cambiarplaceholder = "S./";
                 //  $('#inpt-imagen-entrada').attr('src', imagenPeru);
                 //  $('#inpt-imagen-salida').attr('src', imagenUsa);
             } else {
                 htmlIn = "ENVÍAS DOLARES";
                 htmlOut = "RECIBES SOLES";
+                resultadoplaceholder = "S./";
+                cambiarplaceholder = "$";
                 //  $('#inpt-imagen-entrada').attr('src', imagenUsa);
                 //  $('#inpt-imagen-salida').attr('src', imagenPeru);
             }
             controls.textoPen.text(htmlIn);
             controls.textoUss.text(htmlOut);
+            controls.idcambiar.attr("placeholder", cambiarplaceholder)
+            controls.idresultado.attr("placeholder", resultadoplaceholder)
         },
 
         calcularMonto: function (val, direccion) {

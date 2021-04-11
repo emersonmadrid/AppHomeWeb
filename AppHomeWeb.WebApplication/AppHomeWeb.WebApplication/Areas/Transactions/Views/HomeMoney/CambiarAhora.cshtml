@@ -6,7 +6,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
-    @Styles.Render("~/Content/css")
+ @*   @Styles.Render("~/Content/css431")*@
+   @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     <script>
@@ -21,10 +22,12 @@
         /*    --------------------------------------------------
         :: General
         -------------------------------------------------- */
-        body {
+/*        body {
             font-family: 'Open Sans', sans-serif;
             color: #353535;
-        }
+        }*/
+
+
 
         .content h1 {
             text-align: center;
@@ -210,46 +213,56 @@
             box-shadow: 0 0 1px #fff, inset 0 0 2px #fff;
         }
 
-        .b1CajaWrap {
+/*        .b1CajaWrap {
             position: relative;
-        }
+        }*/
     </style>
 </head>
 <!------ Include the above in your HEAD tag ---------->
 
 <body>
-    <div id="ContenedorCambiarAhora">
+
+    <div class="wrapper" id="ContenedorCambiarAhora">
+
+        <div class="panel panel-success" style="top:0px; position: absolute;width:100%">
+            <div class="panel-heading">
+                <h6 style="font-size:24px;" class="panel-title text-center text-xl-center">
+                    Ingrese el monto a cambiar
+                </h6>
+            </div>
+        </div>
+
         @*<div class="container-fluid">
-                <div class="container show-top-margin separate-rows tall-rows">
-                    <div class="row show">
-                        <div class="col-md-1" style="background-color:crimson">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                        <div class="col-md-1">.col-md-1</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8" style="background-color:aquamarine">.col-md-8</div>
-                        <div class="col-md-4" style="background-color:darkgreen">.col-md-4</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4" style="background-color:brown">.col-md-4</div>
-                        <div class="col-md-4" style="background-color:chartreuse">.col-md-4</div>
-                        <div class="col-md-4" style="background-color:aquamarine">.col-md-4</div>
-                    </div>
-                    <div class="row show-grid">
-                        <div class="col-md-6" style="background-color:brown">.col-md-6</div>
-                        <div class="col-md-6" style="background-color:chartreuse">.col-md-6</div>
-                    </div>
+            <div class="container show-top-margin separate-rows tall-rows">
+                <div class="row show">
+                    <div class="col-md-1" style="background-color:crimson">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
+                    <div class="col-md-1">.col-md-1</div>
                 </div>
-            </div>*@
+                <div class="row">
+                    <div class="col-md-8" style="background-color:aquamarine">.col-md-8</div>
+                    <div class="col-md-4" style="background-color:darkgreen">.col-md-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4" style="background-color:brown">.col-md-4</div>
+                    <div class="col-md-4" style="background-color:chartreuse">.col-md-4</div>
+                    <div class="col-md-4" style="background-color:aquamarine">.col-md-4</div>
+                </div>
+                <div class="row show-grid">
+                    <div class="col-md-6" style="background-color:brown">.col-md-6</div>
+                    <div class="col-md-6" style="background-color:chartreuse">.col-md-6</div>
+                </div>
+            </div>
+        </div>*@
         <div class="col-md-12 pdg-01 color-body d-flex ">
             <div class="">
                 <div class="row" style="margin-left:20px; margin-right:1px">
@@ -259,7 +272,6 @@
                                 <img alt="icono paso uno registro securex" class="mrg-top15"
                                      src="https://securexweb.s3.amazonaws.com/ambientePrueba/Resources/WebContent/public/web/img/registrar/icono-paso0.png"
                                      width="200">
-                                <h1 class="active text-center">Ingrese el monto a cambiar:</h1>
                             </div>
 
                             <div class="text-center py-5">
@@ -269,7 +281,7 @@
 
                                         </div>
 
-                                        <div  id="purchase-span-item" class="col-xs-3 col-md-3" style="text-align:right; opacity: 0.5;">
+                                        <div id="purchase-span-item" class="col-xs-3 col-md-3" style="text-align:right; opacity: 0.5;">
                                             Compra:
                                             <span id="idprecioCompra" style="font-size: 17px;"> </span>
                                         </div>
@@ -293,11 +305,11 @@
                                         </div>
                                         <div class="col-xs-3 col-md-3">
                                             <p id="textoPen" class="text-primary">ENVÍAS SOLES</p>
-                                            <input id="idcambiar" type="text" class="form-control" placeholder="S./" />
+                                            <input id="idcambiar" type="text" class="form-control text-center" placeholder="S./" />
                                         </div>
                                         <div class="col-xs-3 col-md-3">
                                             <p id="textoUss" class="text-primary">RECIBES DOLARES</p>
-                                            <input id="idresultado" type="text" class="form-control" placeholder="$" />
+                                            <input id="idresultado" type="text" class="form-control text-center" placeholder="$" />
                                         </div>
                                         <div class="col-xs-3 col-md-3">
                                         </div>
