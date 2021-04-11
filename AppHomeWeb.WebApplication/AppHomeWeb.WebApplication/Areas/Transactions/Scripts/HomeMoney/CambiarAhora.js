@@ -16,7 +16,7 @@
 
         });
     };
-    var tipoCambioMoneda = 0;
+    
     Form.prototype = {
         constructor: Form,
         init: function () {
@@ -33,7 +33,7 @@
             var that = this,
                 controls = that.getControls();
 
-            //that.GetTipo_Cambio();
+            that.GetTipo_Cambio();
 
         },
 //nuevo comentario con ignore
@@ -67,10 +67,9 @@
         btncambiarMoneda_click: function () {
             var that = this,
                 controls = that.getControls();
-            console.log('entro');
-            tipoCambioMoneda = (tipoCambioMoneda == 0 ? 1 : 0);
-            //that.calcularMonto(controls.idcambiar.val(), 0);
-            console.log(tipoCambioMoneda);
+            
+            that.tipoCambioMoneda = (that.tipoCambioMoneda == 0 ? 1 : 0);
+            that.calcularMonto(controls.idcambiar.val(), 0);
             that.actualizarValoresMoneda();
         },
 
@@ -78,7 +77,7 @@
             var that = this,
                 controls = that.getControls();
             var montoEntrada = controls.idcambiar.val();
-            if (montoEntrada > 0 && tipoCambioMoneda != null) {
+            if (montoEntrada > 0 && that.tipoCambioMoneda != null) {
                 that.setCambiarAhora(montoEntrada);
             } else {
                 //$('#mensaje-error').text("Ingrese monto para continuar");
@@ -138,32 +137,29 @@
                 controls = that.getControls();
             var htmlIn = "";
             var htmlOut = "";
-            if (tipoCambioMoneda == 0) {
-                htmlIn = "PEN";
-                htmlOut = "USD";
+            if (that.tipoCambioMoneda == 0) {
+                htmlIn = "ENVÍAS SOLES";
+                htmlOut = "RECIBES DOLARES";
                 //  $('#inpt-imagen-entrada').attr('src', imagenPeru);
                 //  $('#inpt-imagen-salida').attr('src', imagenUsa);
             } else {
-                htmlIn = "USD";
-                htmlOut = "PEN";
+                htmlIn = "ENVÍAS DOLARES";
+                htmlOut = "RECIBES SOLES";
                 //  $('#inpt-imagen-entrada').attr('src', imagenUsa);
                 //  $('#inpt-imagen-salida').attr('src', imagenPeru);
             }
             controls.textoPen.text(htmlIn);
             controls.textoUss.text(htmlOut);
-            //$('#textoSol').text(htmlIn);
-            //$('#textoUss').text(htmlOut);
         },
 
         calcularMonto: function (val, direccion) {
             var that = this,
                 controls = that.getControls();
-            var tipoCambioMoneda = 0;
             var resultado = 0.00;
             var venta = controls.idprecioVenta.text();
             var compra = controls.idprecioCompra.text();
             if (direccion === 0) {
-                if (tipoCambioMoneda < 1) {
+                if (that.tipoCambioMoneda < 1) {
                     // SOLES A DOLARES
                     resultado = that.roundToX(parseFloat(val) / parseFloat(venta), 2);
 
@@ -177,7 +173,7 @@
                 }
                 controls.idresultado.val(resultado);
             } else {
-                if (tipoCambioMoneda < 1) {
+                if (that.tipoCambioMoneda < 1) {
                     // SOLES A DOLARES
                     resultado = that.roundToX(parseFloat(val) * parseFloat(venta), 2);
                 } else {
@@ -271,6 +267,6 @@
 
         return value || this;
     };
-    $.fn.ContenedorCambiarAhora.defaults = {}
+    $.fn.ContenedorCambiarAhora.defaults = { tipoCambioMoneda:0}
     $('#ContenedorCambiarAhora').ContenedorCambiarAhora();
 })(jQuery);
