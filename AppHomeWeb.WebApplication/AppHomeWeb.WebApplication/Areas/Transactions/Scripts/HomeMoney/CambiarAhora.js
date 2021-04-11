@@ -36,7 +36,7 @@
             //that.GetTipo_Cambio();
 
         },
-//quite el comentario
+//nuevo comentario con ignore
         setCambiarAhora: function () {
             var obj = {
                 monto: montoEntrada,
