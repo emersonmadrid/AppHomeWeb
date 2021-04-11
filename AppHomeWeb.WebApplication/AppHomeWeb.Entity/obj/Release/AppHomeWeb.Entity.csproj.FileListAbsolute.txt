@@ -1,5 +1,0 @@
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\bin\Release\AppHomeWeb.Entity.dll
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\bin\Release\AppHomeWeb.Entity.pdb
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\obj\Release\AppHomeWeb.Entity.csproj.CoreCompileInputs.cache
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\obj\Release\AppHomeWeb.Entity.dll
-C:\Users\emadrid\Downloads\AppHomeWebEMERSON\AppHomeWeb\AppHomeWeb.WebApplication\AppHomeWeb.Entity\obj\Release\AppHomeWeb.Entity.pdb

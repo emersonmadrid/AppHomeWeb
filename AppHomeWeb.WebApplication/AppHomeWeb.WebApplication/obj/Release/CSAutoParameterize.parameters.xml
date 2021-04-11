@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="Conexion-Web.config Connection String" description="Conexion Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="data source=database-2.cawbbhs9mihu.us-east-2.rds.amazonaws.com;Initial Catalog=homemoney;User ID=admin; Password=12345678;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\emadrid\\Downloads\\AppHomeWebEMERSON\\AppHomeWeb\\AppHomeWeb\.WebApplication\\AppHomeWeb\.WebApplication\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Conexion']/@connectionString" />
-  </parameter>
-</parameters>
